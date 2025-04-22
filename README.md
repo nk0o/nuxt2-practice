@@ -67,3 +67,53 @@ More information about the usage of this directory in [the documentation](https:
 This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+
+
+
+### 폴더구조
+# Components
+components/
+├── common/                     # 버튼, 카드, 인풋 등 재사용 가능한 공통 컴포넌트
+├── layout/                     # Header, Footer, Sidebar 등 레이아웃 구성 요소
+    ├── Footer.vue 
+    ├── Header.vue 
+    └── Nav.vue    
+├── sections/                   # 페이지 단위로 재사용되는 섹션 컴포넌트
+├── ui/                         # 아주 기본적인 UI 단위 컴포넌트 (예: Icon, Badge)
+├── modals/                     # 모달 컴포넌트
+└── forms/                      # 폼 관련 컴포넌트 (Input, Checkbox 등)
+
+# Layouts
+layouts/
+├── default.vue                 # 레이아웃 설정없을때 default layout
+├── blog.vue                    # 블로그 layout
+└── error.vue                   # error 페이지
+
+# Pages
+pages/
+├── product/                    # Product List
+├── event/                      # Event List
+    ├── event1.vue                  # 시즌 한정 상품 소개 이벤트
+    └── event2.vue                  # Event Ⅱ
+
+# SCSS
+scss/
+├── abstracts/                  # 변수, 믹스인, 함수 등
+│   ├── _variables.scss
+│   ├── _mixins.scss
+│   └── _functions.scss
+├── base/                       # 기본 레이아웃 설정
+│   ├── _reset.scss
+│   ├── _typography.scss
+│   └── _base.scss
+├── components/                 # UI 요소 단위
+│   └── _button.scss
+├── layout/                     # 레이아웃 관련 설정 (header, footer 등)
+│   └── _header.scss
+├── pages/                      # 페이지별 스타일
+│   └── _home.scss
+├── themes/                     # 테마 관련 변수들 (다크모드 등)
+│   └── _default.scss
+├── utils/                      # 유틸 클래스 (text-center, mt-1 등)
+│   └── _helpers.scss
+└── global.scss

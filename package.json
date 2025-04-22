@@ -17,6 +17,8 @@
     "@nuxt/types": "^2.15.7",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/tailwindcss": "^4.2.0",
-    "postcss": "^8.3.5"
+    "postcss": "^8.3.5",
+    "sass": "^1.87.0",
+    "sass-loader": "^10.5.2"
   }
 }

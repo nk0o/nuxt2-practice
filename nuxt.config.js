@@ -17,15 +17,38 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['@/assets/css/tailwind.css'],
+  css: [
+    '@/assets/css/tailwind.css',
+    '@/assets/scss/global.scss'
+  ],  
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
   ],
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
-
+  // Auto import components: https://go.nuxtjs.dev/config-components  
+  components: [
+    {
+      path: '~/components/common',
+      pathPrefix: false, // true로 하면 <CommonBaseButton> 이런 식으로 호출해야 함
+    },
+    {
+      path: '~/components/event1',
+      pathPrefix: false,
+    },
+    {
+      path: '~/components/forms',
+      pathPrefix: false,
+    },
+    {
+      path: '~/components/layout',
+      pathPrefix: false,
+    },
+    {
+      path: '~/components/modals',
+      pathPrefix: false,
+    }
+  ],
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/typescript
