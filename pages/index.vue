@@ -1,15 +1,18 @@
 <template>
   <!-- 시즌 한정 상품 메인 페이지 -->
-  <div class="p-4">
-    <h1 class="text-2xl font-bold mb-4">시즌 한정 상품 소개</h1>
-  </div>
+  <div class="p-4"></div>
 </template>
 
-<script>
-export default {
-  async asyncData({ $axios }) {
-    const products = await $axios.$get('https://fakestoreapi.com/products?limit=1')
-    return { products }
+<script lang="ts">
+import { defineComponent } from "@nuxtjs/composition-api";
+import { NuxtAxiosInstance } from "@nuxtjs/axios";
+export default defineComponent({
+  async asyncData({ $axios }: { $axios: NuxtAxiosInstance }) {
+    const products = await $axios.$get("/products?limit=6");
+    return { products };
   },
-}
+  setup() {
+    return {};
+  },
+});
 </script>

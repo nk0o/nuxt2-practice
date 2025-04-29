@@ -93,8 +93,9 @@ layouts/
 pages/
 ├── product/                    # Product List
 ├── event/                      # Event List
-    ├── event1.vue                  # 시즌 한정 상품 소개 이벤트
-    └── event2.vue                  # Event Ⅱ
+    ├── eventA.vue                  # 시즌 한정 상품 소개 이벤트
+    ├── eventB.vue                  # Event Ⅱ
+    └── eventC.vue                  # Event Ⅲ
 
 # SCSS
 scss/

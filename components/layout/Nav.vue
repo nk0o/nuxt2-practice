@@ -3,23 +3,31 @@
     <ul class="flex items-center gap-6 text-sm">
       <li>
         <NuxtLink
-          to="/about"
+          to="/event/eventA"
           class="text-gray-500 transition hover:text-gray-500/75"
-          >Event Ⅰ</NuxtLink
+          >Event A</NuxtLink
         >
       </li>
 
       <li>
         <NuxtLink
-          to="/about"
+          to="/event/eventB"
           class="text-gray-500 transition hover:text-gray-500/75"
-          >Event Ⅱ</NuxtLink
+          >Event B</NuxtLink
         >
       </li>
 
       <li>
         <NuxtLink
-          to="/about"
+          to="/event/eventC"
+          class="text-gray-500 transition hover:text-gray-500/75"
+          >Event C</NuxtLink
+        >
+      </li>
+
+      <li>
+        <NuxtLink
+          to="/product"
           class="text-gray-500 transition hover:text-gray-500/75"
           >Products</NuxtLink
         >

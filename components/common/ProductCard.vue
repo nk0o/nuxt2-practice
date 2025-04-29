@@ -1,29 +1,26 @@
 <template>
   <!-- 상품 카드 컴포넌트 -->
-  <a href="#" class="group relative block bg-black" :class="className">
-    <img
+    <a href="#" class="group h-full block overflow-hidden">
+      <img 
       :alt="productTitle"
-      :src="productImg"
-      class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
-    />
+      :src="productImg" 
+      class="aspect-square w-4/5 mx-auto object-cover object-top transition duration-500 group-hover:scale-105">
 
-    <div class="relative p-4 sm:p-6 lg:p-8">
-      <p class="text-xl font-bold text-white sm:text-2xl">{{ productTitle }}</p>
+      <div class="relative bg-white pt-3">
+        <h3 class="text-sm leading-4 text-gray-700 group-hover:underline overflow-hidden text-ellipsis line-clamp-2">
+          {{ productTitle }}
+        </h3>
+        <p class="pt-2 text-xs leading-4 text-gray-500 overflow-hidden text-ellipsis line-clamp-3">
+          {{ productDescription }}
+        </p>
 
-      <div class="mt-32 sm:mt-48 lg:mt-64">
-        <div
-          class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
-        >
-          <p class="text-sm text-white">
-            {{ productDescription }}
-          </p>
-          <p class="text-sm text-white">
-            ￦ {{ productPrice }}
-          </p>
-        </div>
+        <p class="mt-2">
+          <span class="sr-only"> Regular Price </span>
+
+          <span class="tracking-wider text-gray-900">  ￦ {{ productPrice }} </span>
+        </p>
       </div>
-    </div>
-  </a>
+    </a>
 </template>
 
 <script>
@@ -54,9 +51,4 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.hover-expand:hover {
-  &-child {
-    translate: tranform(-4px, -4px);
-  }
-}
 </style>
